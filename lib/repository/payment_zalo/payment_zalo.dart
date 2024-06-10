@@ -9,7 +9,7 @@ import '../../utils/zalo/endpoints.dart';
 import '../../utils/zalo/zalo_utils.dart';
 
 class ZaloPayConfig {
-  static const String appId = "2554";
+  static const String appId = "999";
   static const String key1 = "sdngKKJmqEMzvh5QQcdD2A9XBSKUNaYn";
   static const String key2 = "trMrHtvjo6myautxDUiAcYsVtaeQ8nhf";
 
@@ -26,7 +26,7 @@ Future<CreateOrderResponse?> createOrder(int price) async {
   body['app_user'] = ZaloPayConfig.appUser;
   body['app_time'] = DateTime.now().millisecondsSinceEpoch.toString();
   body['amount'] = price.toStringAsFixed(0);
-  body['app_trans_id)'] = ZaloUtils.getAppTransId();
+  body['app_trans_id'] = ZaloUtils.getAppTransId();
   body['embed_data'] = "{}";
   body['item'] = "[]";
   body['bank_code'] = ZaloUtils.getBankCode();

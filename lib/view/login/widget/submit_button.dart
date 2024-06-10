@@ -21,7 +21,7 @@ class SubmitButton extends StatelessWidget {
         }
         if (state.postApiStatus == PostApiStatus.success) {
           Navigator.pushNamedAndRemoveUntil(
-              context, RoutesName.home, (route) => false);
+              context, RoutesName.zalo, (route) => false);
         }
       },
       child: BlocBuilder<LoginBloc, LoginStates>(

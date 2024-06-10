@@ -12,10 +12,10 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const SplashScreen(),
         );
-      case RoutesName.home:
-        return MaterialPageRoute(
-          builder: (context) => const MoviesScreen(),
-        );
+      // case RoutesName.home:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const MoviesScreen(),
+      //   );
 
       case RoutesName.login:
         return MaterialPageRoute(

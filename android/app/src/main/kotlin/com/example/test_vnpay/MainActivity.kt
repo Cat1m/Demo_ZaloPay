@@ -44,6 +44,11 @@ class MainActivity: FlutterActivity() {
 
                         override fun onPaymentError(zaloPayErrorCode: ZaloPayError?, zpTransToken: String?, appTransID: String?) {
                             Log.d(tagError, String.format("[zaloPayErrorCode]: %s, [zpTransToken]: %s, [appTransID]: %s", zaloPayErrorCode.toString(), zpTransToken, appTransID))
+                            if (zaloPayErrorCode == ZaloPayError.PAYMENT_APP_NOT_FOUND) {
+                                ZaloPaySDK.getInstance()?.navigateToZaloPayOnStore(this@MainActivity);
+                                return result.success("chưa cài app")
+                            }
+
                             result.success("Payment failed")
                         }
 
