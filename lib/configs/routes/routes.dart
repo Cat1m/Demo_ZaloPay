@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sample_flutter/configs/routes/routes_name.dart';
+import 'package:sample_flutter/utils/zalo/config.dart';
+import 'package:sample_flutter/view/zalo/dashboard.dart';
 
 import '../../view/views.dart';
 
@@ -18,6 +20,14 @@ class Routes {
       case RoutesName.login:
         return MaterialPageRoute(
           builder: (context) => const LoginScreen(),
+        );
+
+      case RoutesName.zalo:
+        return MaterialPageRoute(
+          builder: (context) => const Dashboard(
+            title: AppConfig.appName,
+            version: AppConfig.version,
+          ),
         );
       default:
         return MaterialPageRoute(

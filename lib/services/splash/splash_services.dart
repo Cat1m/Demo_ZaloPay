@@ -12,7 +12,7 @@ class SplashServices {
         Timer(
           const Duration(seconds: 2),
           () => Navigator.pushNamedAndRemoveUntil(
-              context, RoutesName.home, (route) => false),
+              context, RoutesName.zalo, (route) => false),
         );
       } else {
         Timer(
